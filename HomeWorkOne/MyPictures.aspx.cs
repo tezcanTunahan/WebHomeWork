@@ -18,11 +18,19 @@ namespace HomeWorkOne
                         DropDownList1.Items.Add(new ListItem("Muttalip", "4"));
                         DropDownList1.Items.Add(new ListItem("Bursa", "5"));
 
+                    PopulateBorderSizeDropDown();
 
             }
                
         }
 
+        protected void PopulateBorderSizeDropDown()
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                BorderSizeDropDown.Items.Add(new ListItem(i.ToString(), i.ToString()));
+            }
+        }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -98,6 +106,25 @@ namespace HomeWorkOne
         protected void CheckBox_CheckedChanged(object sender, EventArgs e)
         {
             SetBorderColor();
+        }
+
+        protected void SetBorderSize()
+        {
+            string borderSize = BorderSizeDropDown.SelectedValue;
+
+            if (!string.IsNullOrEmpty(borderSize))
+            {
+                DisplayImage.Style.Add("border-width", $"{borderSize}px");
+            }
+            else
+            {
+                DisplayImage.Style.Remove("border-width");
+            }
+        }
+
+        protected void BorderSizeDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetBorderSize();
         }
     }
 }

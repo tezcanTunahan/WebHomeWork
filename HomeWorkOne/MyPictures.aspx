@@ -23,6 +23,8 @@
                 <asp:CheckBox ID="BlueCheckBox" runat="server" Text="Blue" OnCheckedChanged="CheckBox_CheckedChanged" AutoPostBack="true" />
                 <asp:CheckBox ID="GreenCheckBox" runat="server" Text="Green" OnCheckedChanged="CheckBox_CheckedChanged" AutoPostBack="true" />
 
+               <asp:DropDownList ID="BorderSizeDropDown" runat="server" OnSelectedIndexChanged="BorderSizeDropDown_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+
 
            </div>
             <asp:Image ID="DisplayImage" runat="server" AlternateText="Seçilen Resim" Height="511px" Width="1211px" />

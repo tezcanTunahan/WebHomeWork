@@ -87,6 +87,15 @@ namespace HomeWorkOne
         protected global::System.Web.UI.WebControls.CheckBox GreenCheckBox;
 
         /// <summary>
+        /// BorderSizeDropDown denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik üretilmiş alan.
+        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList BorderSizeDropDown;
+
+        /// <summary>
         /// DisplayImage denetimi.
         /// </summary>
         /// <remarks>
